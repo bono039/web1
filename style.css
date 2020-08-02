@@ -1,0 +1,43 @@
+body {
+  margin:0;
+}
+a {
+  color:black;
+  text-decoration: none; /*밑줄 없애기*/
+}
+#active {
+  color:red;
+}
+h1 {
+  font-size:45px;
+  text-align:center;
+  border-bottom:1px solid gray;
+  margin:0;
+  padding:20px;
+}
+ol { /* 가로로 줄 긋기 中 ol 태그 이용 */
+  border-right:1px solid gray;
+  width:100px; /* ol 태그 폭 지정 */
+  margin:0;
+  padding:20px; /* margin:0; 하면 넘 딱 붙어서 보기 힘드니까 패딩 */
+}
+#grid {
+  display:grid;
+  grid-template-columns: 150px 1fr; /* ol div태그 */
+}
+#grid ol { /* 웹페이지에 있는 모든 ol 중 부모가 grid인 ol 태그만 이용하는 선택자*/
+  padding-left:33px;
+}
+#grid #article {
+  padding-left:25px;
+}
+@media(max-width:800px){
+  #grid {
+    display:block; /* display가 grid였던 것이 block이 됨 */
+  }
+  ol{
+    border-right:none;
+  }
+  h1 {
+    border-bottom:none;
+  }
